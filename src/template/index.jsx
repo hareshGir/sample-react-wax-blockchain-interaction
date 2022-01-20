@@ -6,7 +6,7 @@ const Template = () => {
   <div className={classes.templateMainContainer}>
    <div className={classes.leftSection}>
     <div>
-     <label>From</label>
+     <label>From Account</label>
      <input type="text" />
     </div>
     <div>

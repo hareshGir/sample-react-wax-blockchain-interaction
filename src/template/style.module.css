@@ -1,82 +1,82 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .templateMainContainer {
- border: 1px solid red;
- width: 60%;
- height: 600px;
- margin: 20px auto;
- background: #fff;
- display: flex;
- justify-content: space-between;
- align-items: flex-start;
- position: fixed;
- top: 45%;
- left: 50%;
- transform: translate(-50%, -50%);
+  border: 1px solid red;
+  width: 60%;
+  height: 600px;
+  margin: 20px auto;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
- border-radius: 5px;
- box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
-  0px 4px 6px -2px rgba(0, 0, 0, 0.05);
- box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .leftSection {
- width: 50%;
- height: 100%;
- padding: 20px;
- background: #4a7ce931;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background: #4a7ce931;
 }
 
 .leftSection > div {
- margin: 20px 0;
- display: flex;
- justify-content: flex-start;
- align-items: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .leftSection > div > label {
- width: 25%;
- font-size: 16px;
- color: #13398d;
+  width: 25%;
+  font-size: 16px;
+  color: #13398d;
 }
 
 .leftSection > div > input {
- width: 75%;
- padding: 10px 5px;
- font-size: 16px;
- font-weight: 600;
- letter-spacing: 1px;
- color: #13398d;
+  width: 75%;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #13398d;
 }
 
 .leftSection > div > textarea {
- width: 75%;
- padding: 10px 5px;
- font-size: 16px;
- font-weight: 600;
- letter-spacing: 1px;
- color: #13398d;
+  width: 75%;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #13398d;
 }
 
 .leftSection > button {
- padding: 10px 20px;
- background: none;
- font-size: 16px;
- outline: none;
- border: 1px solid #13398d;
- color: #13398d;
- border-radius: 3px;
- margin: 10px 0;
- margin-left: 24%;
- font-weight: 600;
- transition: 0.1s ease-in-out;
+  padding: 10px 20px;
+  background: none;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #13398d;
+  color: #13398d;
+  border-radius: 3px;
+  margin: 10px 0;
+  margin-left: 24%;
+  font-weight: 600;
+  transition: 0.1s ease-in-out;
 }
 
 .leftSection > button:hover {
- background: #13398d;
- color: #fff;
- cursor: pointer;
+  background: #13398d;
+  color: #fff;
+  cursor: pointer;
 }

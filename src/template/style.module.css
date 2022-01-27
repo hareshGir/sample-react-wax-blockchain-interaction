@@ -51,6 +51,9 @@
   letter-spacing: 1px;
   color: #13398d;
 }
+button:disabled {
+  background-color: lightsteelblue !important;
+}
 
 .leftSection > div > textarea {
   width: 75%;
@@ -77,6 +80,6 @@
 
 .leftSection > button:hover {
   background: #13398d;
-  color: #fff;
+  color: rgb(199, 207, 204);
   cursor: pointer;
 }

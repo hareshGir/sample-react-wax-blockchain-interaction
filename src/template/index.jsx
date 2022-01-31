@@ -10,9 +10,10 @@ const [errorInputAmount,setErrorInputAmount]=useState();
 const [inputTA,setInputTA]=useState("");
 const [accountNo,setAccountNo]=useState("IBAN");
 const [balance,setBalance]=useState();
+const [lowBalance,setLowBalance]=useState("");
+const [valid,setValid]=useState(false)
 
 const validate=()=>{
-   
   if(inputTo==="")
   setErrorTo("To is required");
  else setErrorTo ("");
@@ -29,14 +30,20 @@ const handleAccountChange=(e)=>{
 const checkBalance=()=>{
   setBalance(50000)
   setInputFrom(accountNo)
+  
 }
 
 const handleTransaction=()=>{
   validate();
-  setBalance(balance-inputAmount)
-setInputFrom("")
-setInputTo("")
-setInputAmount("")
+  if(inputAmount>balance){
+setLowBalance("You have entered more amount than your current balance.")
+ }else { if (window.confirm(`Transaction Details \n Account No : ${inputTo} \n Ammount : ${inputAmount} \n Are you want to proceed this Transaction? `)){
+  setBalance(balance-inputAmount);  
+  setInputFrom("")
+    setInputTo("")
+    setInputAmount("")
+ }
+ } 
 }
 
   return (
@@ -58,7 +65,7 @@ setInputFrom(e.currentTarget.value);
     <div>
      <label>Amount</label>
      <input value ={inputAmount} onChange={(e)=>{
-  setInputAmount(e.currentTarget.value);
+  setInputAmount(e.currentTarget.value);setLowBalance("");
 }} type="number" />
     </div>
     <label>{errorInputAmount}</label>
@@ -68,10 +75,12 @@ setInputFrom(e.currentTarget.value);
      <textarea value ={inputTA} onChange={(e)=>{ setInputTA(e.currentTarget.value);}}
       name="desc" id="desc"></textarea>
     </div>
-    <button disabled={inputFrom === ""?true:false||inputTo === ""?true:false||inputAmount === ""?true:false} onClick={handleTransaction}  >Send Transaction</button>
+    <div ><p style={{color:'red',cols:'20', rows:'4', margin:'auto'}}>{lowBalance}</p></div>
+    <button disabled={inputFrom === ""?true:false||inputTo === ""?true:false||inputAmount === ""?true:false||valid}   onClick={handleTransaction} >Send Transaction</button>
+  
    </div>
    <div className={classes.leftSection}>
-   <label>Account Detail</label>
+   <label style={{textAlign:'center',marginLeft:'150px',color:'#13398d',fontWeight:'bold' }}>Account Detail</label>
      <div>
      <label  >Account </label>
      <input autoFocus onChange={handleAccountChange} value={accountNo} type="text" />
@@ -80,7 +89,6 @@ setInputFrom(e.currentTarget.value);
     <br />
     <div><label>Balance:{balance}</label></div>
     </div>
-      
   </div>
  );
 };
